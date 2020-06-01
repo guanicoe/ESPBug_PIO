@@ -60,7 +60,7 @@ You want to go to the settings to prepare the hook. Let's go through all the set
 
 # Installation
 
-To get information on the installation you can either try to figure it out by yourself. I use atom and plateformIO. or you can look at the old version which you can compile using the arduino IDE. [https://github.com/willmendil/ESPBug](https://github.com/willmendil/ESPBug). There is also a binary available that you should be able to simply upload on the board using the arduino IDE.
+To get information on the installation you can either try to figure it out by yourself. I use atom and plateformIO. or you can look at the old version which you can compile using the arduino IDE. [https://github.com/willmendil/ESPBug](https://github.com/willmendil/ESPBug). There is also a binary available in `/bin` that you should be able to simply upload on the board using the arduino IDE.
 
 
 
