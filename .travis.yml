@@ -36,6 +36,7 @@ cache:
 install:
     - pip install -U platformio
     - platformio update
+    - platformio lib -g install ArduinoJson@5.13.4
 
 script:
     - platformio run
