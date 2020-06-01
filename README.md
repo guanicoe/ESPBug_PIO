@@ -5,6 +5,9 @@
 [![Build Status](https://travis-ci.com/guanicoe/ESPBug_PIO.svg?branch=master)](https://travis-ci.com/guanicoe/ESPBug_PIO)
 
 
+# Restructure of the initial project [https://github.com/willmendil/ESPBug](https://github.com/willmendil/ESPBug) to use plateformIO
+The idea is to make the development easier.
+
 # ESPBug
 
 ESPBug is a rogue captive portal program which runs on the ESP8266 dev board, such as the NodeMCU (clones included). It is a social engennering tool which generates a WiFi network of a given name alluring people to connect  to it and enter some credential.
@@ -57,58 +60,7 @@ You want to go to the settings to prepare the hook. Let's go through all the set
 
 # Installation
 
-You should be able to download the binary from the release tab in github.
-[https://github.com/willmendil/ESPBug/releases/tag/0.1](https://github.com/willmendil/ESPBug/releases/tag/0.1)
-and just updload the binary through the arduino IDE. Look below to see how to setup the board.
-
-# From source
-To get this code running on a nodeMCU like board - such as the one illustrated below - you need to install the [Arduino IDE] (! I have only tried on Linux, but this should work on any OS - virtual machine included).
-
-![esp8266 image][esp8266]
-
-```
-Download and install
-```
-
-From there you need a couple installations clicking the upload button. First got `File -> Preferences`. At the bottom of the window, you should see `Additional Boards Manager URLS`. Click the little icon at the end at the end of that line. A new window should show up asking you to `Enter additional URLS, one for each row`. Add:
-```
-https://arduino.esp8266.com/stable/package_esp8266com_index.json
-```
-and click `OK`.
-
-Next, in library manager (`Sketch -> Include Library -> Manage Libraries`) search for
-```
-ArduinoJson
-```
-From Benoit Blanchon. **YOU MUST INSTALL VERSION `5.13.5`** not version 6.
-
-nearly there
-
-Now you only need to install the board. `Tools -> Board: "<SOME BOARD NAME>" -> Boards Manager`. In the search bar, type
-
-```
-esp8266
-```
-by **ESP8266 Community**. I installed version ~~`2.5.5`~~ `2.6.0`.
-
-And YOU ARE DONE! Now, you need to open the `espbug.ino` and setup the correct parameters for the board.
-
-Here are **MY** setup parameters
-
-```
-Board: "NodeMCU 1.0 (ESP-12E Module)"
-Upload Speed: "115200"
-CPU Frequency: "160 MHz"
-Flash Size: "4M (FS:3MB OTA:~512KB)"
-Debug port: "Disabled"
-Debug Level: "None"
-IwIP Variant: "v2 Lower Memory"
-VTables: "Flash"
-Exceptions: "Disabled (new can abort)"
-Erase Flash: "All Flash Contents"
-SSL Support: "All SSL ciphers (most compatible)"
-Port : "<USB PORT>"
-```
+To get information on the installation you can either try to figure it out by yourself. I use atom and plateformIO. or you can look at the old version which you can compile using the arduino IDE. [https://github.com/willmendil/ESPBug](https://github.com/willmendil/ESPBug). There is also a binary available that you should be able to simply upload on the board using the arduino IDE.
 
 
 
