@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="220" height="220" src="https://i.imgur.com/vYE79I9.png">
+<img width="220" height="220" src="https://i.imgur.com/vYE79I9.png">
 </p>
 
 [![Build Status](https://travis-ci.com/guanicoe/ESPBug_PIO.svg?branch=master)](https://travis-ci.com/guanicoe/ESPBug_PIO)
