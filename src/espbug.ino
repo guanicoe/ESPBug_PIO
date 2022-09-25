@@ -28,16 +28,12 @@ void setup() {
   digitalWrite(LED, 0);
 
 
+  logging("\n\n------ BOOTING ------\n\nsetup :: Initialising filesystem");
   startSPIFFS();
-  logging("");
-  logging("");
-  logging("------ BOOTING ------");
-  logging("");
-
-  logging("setup :: Initialising File System... Success!");
+  logging("setup :: Filesystem initialized");
 
 
-  logging("setup :: Starting LoadConfig...");
+  logging("setup :: Starting LoadConfig ...");
   loadSettingJSON();
   createSystemJSON();
   logging("setup :: loadSettingJSON DONE");
@@ -46,7 +42,7 @@ void setup() {
   copyWebFiles(true);
   logging("setup :: copyWebFiles DONE");
 
-  logging("setup :: Starting copyWebFiles ...");
+  logging("setup :: Starting startAP ...");
   startAP();
   logging("setup :: startAP DONE");
 
@@ -83,10 +79,5 @@ void loop() {
     client_status();
 
   }
-
-
-
-
-
 
 }
